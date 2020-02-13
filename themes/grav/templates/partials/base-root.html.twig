@@ -4,11 +4,11 @@
     <head>
     {% block head %}
         <meta charset="utf-8" />
-        <title>{% if title %}{{ title }} | {% else %}{% if header.title %}{{ header.title }} | {% endif %}{% endif %}{{ site.title }}</title>
+        <title>{% if title %}{{ title|tu }} | {% else %}{% if header.title %}{{ header.title|tu }} | {% endif %}{% endif %}{{ site.title|tu }}</title>
         {% if header.description %}
-            <meta name="description" content="{{ header.description }}">
+            <meta name="description" content="{{ header.description|tu }}">
         {% else %}
-            <meta name="description" content="{{ site.description }}">
+            <meta name="description" content="{{ site.description|tu }}">
         {% endif %}
         {% if header.robots %}
             <meta name="robots" content="{{ header.robots }}">
